@@ -45,4 +45,5 @@ end
 
 Before do
   Country.destroy_all
+  User.destroy_all
 end

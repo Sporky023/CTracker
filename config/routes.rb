@@ -1,6 +1,8 @@
 CurrencyTracker::Application.routes.draw do
-  root :to => "currencies#index"
-  
+  devise_for :users
+
+  root :to => 'pages#home'
+
   resources :countries, :except => [:new, :destroy]
 
   resources :currencies, :only => [:index, :show]

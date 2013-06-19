@@ -11,3 +11,18 @@ Assumptions and Decisions Made in This Assignment
   This project is so young that it's worth moving to the latest of everything, if possible.
   Going with patch level 429 since Heroku supports that for 1.9.3.
   I'm not going to use Ruby 2.0 because I haven't studied it yet.
+
+5:44 pm:
+  Okay, so I've spent about 1.25 hours so far.
+  The app is on a good footing:
+    ruby 1.9.3-p429
+    rails 3.2.13
+    all other gems updated
+  Now ready to start changing features.
+  I'm going to start by implementing the following stories:
+    Feature: User Accounts
+      Scenario: User signs up (using Devise, no confirmation since we're not messing with email right now)
+      Scenario: User signs in
+
+    Story: User browses countries (will be a modification of the "manage countries" feature)
+      - this will include some refactoring to move tracking out of the Country model into a Visit model
