@@ -13,4 +13,5 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec-expectations'
+  gem 'factory_girl_rails'
 end
