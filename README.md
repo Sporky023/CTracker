@@ -26,3 +26,7 @@ Assumptions and Decisions Made in This Assignment
 
     Story: User browses countries (will be a modification of the "manage countries" feature)
       - this will include some refactoring to move tracking out of the Country model into a Visit model
+
+7:06 pm: Use id instead of nonstandard primary keys on Country and Currency
+  Because having to use special commands for every association is just one more thing to remember
+  And I can't think of a reson to use a nonstandard primary_key

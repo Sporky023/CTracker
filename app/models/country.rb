@@ -1,6 +1,4 @@
 class Country < ActiveRecord::Base
-  self.primary_key = 'code'
-
   attr_accessible :name, :code, :visited
 
   validates_presence_of :name

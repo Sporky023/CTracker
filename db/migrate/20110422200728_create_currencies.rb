@@ -1,6 +1,6 @@
 class CreateCurrencies < ActiveRecord::Migration
   def self.up
-    create_table :currencies, :id => false do |t|
+    create_table :currencies do |t|
       t.string :name
       t.string :code
 
