@@ -6,9 +6,10 @@ gem 'savon'
 gem 'nokogiri'
 gem 'devise'
 
-group :development do
+group :development, :test do
   gem 'cucumber'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'rspec-expectations'
 end
