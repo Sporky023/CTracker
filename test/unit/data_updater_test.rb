@@ -9,7 +9,10 @@ class DataUpdaterTest < ActiveSupport::TestCase
     }
 
     DataUpdater.send(:public, :parse_response)
-    
-    assert expected, DataUpdater.instance.parse_response(response)
+
+    assert(
+      expected == DataUpdater.instance.parse_response(response),
+      "expected hash and response hash don't match"
+    )
   end
 end

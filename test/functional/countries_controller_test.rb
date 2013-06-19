@@ -5,6 +5,7 @@ class CountriesControllerTest < ActionController::TestCase
 
   setup do
     @country = countries(:one)
+    @controller = CountriesController.new
   end
 
   test "should get index" do

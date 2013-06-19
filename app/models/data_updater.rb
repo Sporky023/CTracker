@@ -5,9 +5,10 @@ class DataUpdater
   include Singleton
 
   def initialize
-    @client = Savon::Client.new do
-      wsdl.document = "http://www.webservicex.net/country.asmx?WSDL"
-    end
+    @client = Savon.client(wsdl: 'http://www.webservicex.net/country.asmx?WSDL')
+    # @client = Savon::Client.new do
+    #   wsdl.document = "http://www.webservicex.net/country.asmx?WSDL"
+    # end
   end
 
   def update
