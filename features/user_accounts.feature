@@ -8,7 +8,6 @@ Feature: User Accounts
     When I sign up
     Then I should have a user account
 
-  @focus
   Scenario: Sign in
     Given I am a registered user
     When I sign in

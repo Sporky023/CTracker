@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'savon'
 gem 'nokogiri'
 gem 'devise'
+gem 'pry'
 
 group :development, :test do
   gem 'cucumber'

@@ -2,6 +2,11 @@ Given(/^I am signed out$/) do
   Capybara.reset_sessions!
 end
 
+Given(/^I am signed in$/) do
+  step('I am a registered user')
+  step('I sign in')
+end
+
 When(/^I sign in$/) do
   visit root_path
   click_on 'Sign In'

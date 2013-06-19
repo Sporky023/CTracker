@@ -26,7 +26,7 @@
     <tr>
       <td><%= country.name %></td>
       <td><%= country.code %></td>
-      <td><%= country.visited? ? 'Visited' : 'Not Visited' %></td>
+      <td><%= country.visited_by_user?(current_user) ? 'Visited' : 'Not Visited' %></td>
       <td><%= link_to 'Show', country %></td>
       <td><%= link_to 'Edit', edit_country_path(country) %></td>
     </tr>
