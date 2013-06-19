@@ -1,3 +1,11 @@
+Given(/^I am a registered user$/) do
+  @user = User.create!(
+    email: 'example@example.com',
+    password: 'password',
+    password_confirmation: 'password'
+  )
+end
+
 When(/^I sign up$/) do
   visit root_path
   click_on 'Sign Up'
