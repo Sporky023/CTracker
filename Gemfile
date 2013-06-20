@@ -15,4 +15,5 @@ group :development, :test do
   gem 'rspec-expectations'
   gem 'factory_girl_rails'
   gem 'mocha', require: false
+  gem 'capybara-webkit'
 end
