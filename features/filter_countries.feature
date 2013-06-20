@@ -3,7 +3,7 @@ Feature: Filter Countries
   Any old user
   wants to type a few letters and have it pop up by real-time filtering.
 
-  @focus @javascript
+  @javascript
   Scenario: Filter some countries
     Given the following countries exist:
       | name    | code |
@@ -13,6 +13,7 @@ Feature: Filter Countries
       | Gondor  | h1   |
     And I am signed in
     When I am on the countries page
-    And I filter for "ro"
-    Then I should see "Rohan"
-    And I should not see "Eriador"
+    And I filter for "dor"
+    Then I should see "Eriador"
+    And I should see "Gondor"
+    And I should not see "Rohan"
