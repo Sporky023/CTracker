@@ -6,6 +6,7 @@ class Currency < ActiveRecord::Base
   validates_uniqueness_of :code, :allow_blank => true
 
   belongs_to :country
+  validates_presence_of :country
 
   def self.collected
     all.select {|currency| currency.collected? }
@@ -17,5 +18,9 @@ class Currency < ActiveRecord::Base
 
   def collected?
     country.nil? ? false : country.visited?
+  end
+
+  def collected_by_user?(user)
+    country.visited_by_user?(user)
   end
 end
