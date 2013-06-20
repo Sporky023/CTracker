@@ -48,7 +48,7 @@ Assumptions and Decisions Made in This Assignment
       For now, I will simply link to create a single-element array to create my visits
 
 9:39 pm:
-  Okay that's gone.  Now we're in good shape to move directly into the advanced table features.
+  Okay that's done.  Now we're in good shape to move directly into the advanced table features.
   First I'm gonna tackle the filtering.  That's easy as pie, and I should have it in place before I start messing with "check all".
 
 10:22 pm:
@@ -64,3 +64,10 @@ Assumptions and Decisions Made in This Assignment
 
   There you have it.  I hope my code is readable :)
 
+
+10:41 pm:
+  Upon final check I discovered that the "visit" link wasn't working.
+  Apparently this happens because the javascript is so 3.0-ish (no asset pipeline).
+  If given more time I would start by getting the asset pipeline up to date and make sure that javascript was included into the app correctly.
+  I had to manually add the rails.js file from the jquery-ujs gem.
+  It's a hack, but it works.  I'm now 15 minutes over
