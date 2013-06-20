@@ -51,4 +51,16 @@ Assumptions and Decisions Made in This Assignment
   Okay that's gone.  Now we're in good shape to move directly into the advanced table features.
   First I'm gonna tackle the filtering.  That's easy as pie, and I should have it in place before I start messing with "check all".
 
+10:22 pm:
+  Finished with the text.  Six hours have elapsed.
+  Only implemented half the features, but I also updated the project to the current era.
+  And I think I did it all pretty solidly.
+  And the infrastructure's in place to handle the submission of the checkboxes (whether you make the table a form, or use js to compile the checkboxes into a request).
+  Note the "next_url" method in the countries controller will later contain a conditional:
+    if the array is one element
+      redirect to the show.
+    If multiple elements,
+      redirect to the index.
+
+  There you have it.  I hope my code is readable :)
 
