@@ -20,6 +20,7 @@ class Currency < ActiveRecord::Base
   end
 
   def collected_by_user?(user)
+    return false if country.nil?
     country.visited_by_user?(user)
   end
 end
