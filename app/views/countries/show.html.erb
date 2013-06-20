@@ -12,7 +12,7 @@
 
 <p>
   <b>Status:</b>
-  <%= @country.visited? ? 'Visited' : 'Not Visited' %>
+  <%= visited_status_for(@country) %>
 </p>
 
 <p>
@@ -24,5 +24,7 @@
   </ul>
 </p>
 
-<%= link_to 'Edit', edit_country_path(@country) %> |
+<% unless @country.visited_by_user?(current_user) %>
+  <%= link_to 'Visit', my_visits_path(country_ids: [@country.id]), method: :post %> |
+<% end %>
 <%= link_to 'Back', countries_path %>

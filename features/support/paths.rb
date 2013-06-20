@@ -18,6 +18,8 @@ module NavigationHelpers
       country_path(Country.create!(:name => "Test Country", :code => "tc"))
     when /a country edit page/
       edit_country_path(Country.create!(:name => "Test Country #{Time.now.to_i}", :code => Time.now.to_s))
+    when /^the country page for "(.*?)"$/
+      country_path(Country.find_by_name($1))
 
 
     # Add more mappings here.

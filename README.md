@@ -40,4 +40,11 @@ Assumptions and Decisions Made in This Assignment
   Normally this would be the point where I would put this down and do something else for a while.
   But I will push ahead.  My quality and precision may drop after this point.
 
+9:12 pm: Decision: remove "edit" workflow
+  (a) Users should not be able to edit country or currency records
+  (b) In planning for the multiple checkbox functionality,
+      a request will go to POST /my_visits ("my" implies current user)
+      the params will look like:  params = {:country_ids => [3, 5, 6]}.
+      For now, I will simply link to create a single-element array to create my visits
+
 

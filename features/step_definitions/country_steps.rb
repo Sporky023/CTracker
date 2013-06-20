@@ -1,5 +1,14 @@
+Given(/^a country exists$/) do
+  FactoryGirl.create(:country)
+end
+
 Given /the following countries exist:/ do |countries|
   Country.create!(countries.hashes)
+end
+
+Given(/^I have visited a country named "(.*?)"$/) do |country_name|
+  country = FactoryGirl.create(:country, name: country_name)
+  FactoryGirl.create(:visit, country: country, user: @user)
 end
 
 Given(/^I have visited the following countries:$/) do |countries|

@@ -26,9 +26,13 @@
     <tr>
       <td><%= country.name %></td>
       <td><%= country.code %></td>
-      <td><%= country.visited_by_user?(current_user) ? 'Visited' : 'Not Visited' %></td>
+      <td><%= visited_status_for(country) %></td>
       <td><%= link_to 'Show', country %></td>
-      <td><%= link_to 'Edit', edit_country_path(country) %></td>
+      <td>
+        <% unless country.visited_by_user?(current_user) %>
+          <%= link_to 'Visit', my_visits_path(country_ids: [country.id]), method: :post %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
   </table>
