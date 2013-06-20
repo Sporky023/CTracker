@@ -14,4 +14,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-expectations'
   gem 'factory_girl_rails'
+  gem 'mocha', require: false
 end
