@@ -27,7 +27,8 @@ Feature: Manage countries
       | CountryFive  | c5   | Visited     |
 
   Scenario: Visit Country
-    Given I am on a country page
+    Given I am signed in
+    And I am on a country page
     When I follow "Edit"
     And I check "Visited"
     And I press "Update Country"

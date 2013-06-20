@@ -6,6 +6,14 @@ class CountriesControllerTest < ActionController::TestCase
   setup do
     @country = countries(:one)
     @controller = CountriesController.new
+    @user = FactoryGirl.create(:user)
+    @controller.stubs(:current_user).returns(@user)
+  end
+
+  test "when not logged in should redirect for index" do
+    @controller.stubs(:current_user).returns(nil)
+    get :index
+    assert_response :redirect
   end
 
   test "should get index" do
@@ -28,7 +36,7 @@ class CountriesControllerTest < ActionController::TestCase
     end
 
     assert !assigns[:country].errors[:code].empty?
-  end  
+  end
 
   test "should show country" do
     get :show, :id => @country.to_param

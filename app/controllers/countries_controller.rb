@@ -1,4 +1,6 @@
 class CountriesController < ApplicationController
+  before_filter :redirect_to_home_unless_authenticated
+
   # GET /countries
   # GET /countries.xml
   def index

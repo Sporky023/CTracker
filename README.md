@@ -30,3 +30,7 @@ Assumptions and Decisions Made in This Assignment
 7:06 pm: Use id instead of nonstandard primary keys on Country and Currency
   Because having to use special commands for every association is just one more thing to remember
   And I can't think of a reson to use a nonstandard primary_key
+
+7:58 pm:
+  Countries are now tracking users separately.  Along the way I got FactoryGirl installed.
+  Next up is to do a quick check to make sure controllers always redirect to home unless we're authenticated.

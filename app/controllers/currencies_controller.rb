@@ -1,4 +1,6 @@
 class CurrenciesController < ApplicationController
+  before_filter :redirect_to_home_unless_authenticated
+
   # GET /currencies
   # GET /currencies.xml
   def index

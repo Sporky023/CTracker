@@ -10,6 +10,14 @@ class CurrenciesControllerTest < ActionController::TestCase
   setup do
     @currency = currencies(:one)
     @controller = CurrenciesController.new
+    @user = FactoryGirl.create(:user)
+    @controller.stubs(:current_user).returns(@user)
+  end
+
+  test "when logged out, should redirect for index" do
+    @controller.stubs(:current_user).returns(nil)
+    get :index
+    assert_response :redirect
   end
 
   test "should get index" do
