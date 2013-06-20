@@ -8,7 +8,7 @@ function ViewController(root_element, controller) {
   for( key in controller )
     if( typeof controller[key] == 'function' )
       controller[key] = controller[key].bind(controller);
-  
+
   controller.initialize();
 
   return controller;

@@ -38,7 +38,6 @@ Feature: Manage countries
     When I follow "Visit"
     Then I should see "Status: Visited"
 
-  @focus
   Scenario: Visit Country via index
     Given a country exists
     And I am on the countries page

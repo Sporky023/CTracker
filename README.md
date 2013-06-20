@@ -47,4 +47,8 @@ Assumptions and Decisions Made in This Assignment
       the params will look like:  params = {:country_ids => [3, 5, 6]}.
       For now, I will simply link to create a single-element array to create my visits
 
+9:39 pm:
+  Okay that's gone.  Now we're in good shape to move directly into the advanced table features.
+  First I'm gonna tackle the filtering.  That's easy as pie, and I should have it in place before I start messing with "check all".
+
 

@@ -13,6 +13,9 @@
 
   <h1>Countries</h1>
 
+  <label for="filter_field_for_countries">Filter</label>
+  <input id="filter_field_for_countries" type="text" class="js-filter_control"/>
+
   <table>
     <tr>
       <th>Name</th>
@@ -23,7 +26,7 @@
     </tr>
 
   <% @countries.each do |country| %>
-    <tr>
+    <tr class="js-filter_target" data-filter_matchable="<%= country.name %>">
       <td><%= country.name %></td>
       <td><%= country.code %></td>
       <td><%= visited_status_for(country) %></td>
