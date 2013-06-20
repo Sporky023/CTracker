@@ -34,3 +34,10 @@ Assumptions and Decisions Made in This Assignment
 7:58 pm:
   Countries are now tracking users separately.  Along the way I got FactoryGirl installed.
   Next up is to do a quick check to make sure controllers always redirect to home unless we're authenticated.
+
+8:30 pm:
+  I'm starting to get seriously tired.  In my usual working life I try not to code for more than three hours at a time.
+  Normally this would be the point where I would put this down and do something else for a while.
+  But I will push ahead.  My quality and precision may drop after this point.
+
+
